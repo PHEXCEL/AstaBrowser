@@ -15,7 +15,7 @@ const adTheme = createMuiTheme({ palette });
 
 global.dlManager = new DLManager(store)
 
-setContextMenu(window)
+setContextMenu(document.body)
 
 function App() {
   return (
