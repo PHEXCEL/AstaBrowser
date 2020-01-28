@@ -12,7 +12,6 @@ A simple web browser specialized for downloading videos.
 #### Into the current directory
 
 ```bash
-cd my-electron-app
 git clone https://github.com/PHEXCEL/AstaBrowser.git
 ```
 
