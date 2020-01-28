@@ -53,7 +53,6 @@ export interface ChangeProgressType {
 // make slice
 const slice = createSlice({
     name: "dl",
-    // DEBUG: ここを直す
     initialState,
     reducers: {
       push: (state, action: {payload: CatchVideo}) => {

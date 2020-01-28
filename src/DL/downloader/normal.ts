@@ -225,7 +225,6 @@ export default class NormalDownloader {
   }
 
   run = () => {
-    // DEBUG: Here
     this.downloadHLS()
   }
 

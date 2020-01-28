@@ -53,7 +53,6 @@ export default function FullScreenDialog() {
     console.log('====================================');
     console.log(catchVideo);
     console.log('====================================');
-    // DEBUG: reduxへ送る
     dispatch(downloadThunk(catchVideo))
     dispatch(uiSlice.actions.openDLStartToast({isOpen: true}))
     dispatch(uiSlice.actions.openCatchWindow({isOpen: false}))

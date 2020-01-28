@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-// DEBUG: ここにホームページを貼る
 export const ROOT_URL = "https://phexcel.work/a-star-downloader-start-page/"
 
 export interface BrowserState {

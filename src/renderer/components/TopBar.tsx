@@ -138,7 +138,6 @@ export default function TopBar(): JSX.Element {
       console.log('====================================');
       console.log("onClickSettingBtn");
       console.log('====================================');
-      // DEBUG: reduxへ送る
       dispatch(uiSlice.actions.openSettingWindow({isOpen: true}))
     }
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -156,7 +155,6 @@ export default function TopBar(): JSX.Element {
       console.log(inputString);
       console.log('====================================');
       e.currentTarget.search.blur()
-      // DEBUG: reduxへ送る
       dispatch(browserSlice.actions.push({url: inputString}))
     }
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
