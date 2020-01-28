@@ -1,5 +1,9 @@
 # AstaBrowser
+<div style="text-align:center">
+<img src="https://user-images.githubusercontent.com/44461390/73242011-17c10d00-41e7-11ea-8960-6900b795cbd8.png" alt="AstaBrowser"/>
+<br/>
 A simple web browser specialized for downloading videos.
+</div>
 
 ## Usage
 
