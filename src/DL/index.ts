@@ -155,7 +155,7 @@ export default class DLManager implements DLManagerDelegate{
                     const date = limits[domain]
                     if(((new Date()).getTime() - date) / 60 / 1000 < 30) {
                         const minute = 30 - Math.floor(((new Date()).getTime() - date) / 60 / 1000)
-                        this.store.dispatch(dlSlice.actions.setError(new Error(`A* Downloader places a limit on the number of downloads. Please be sure to download after ${minute} minutes.`)))
+                        this.store.dispatch(dlSlice.actions.setError(new Error(`AstaBrowser places a limit on the number of downloads. Please be sure to download after ${minute} minutes.`)))
                         return
                     } else {
                         setLimitToStore(domain)
