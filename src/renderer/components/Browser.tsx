@@ -25,10 +25,12 @@ export default function Browser(): JSX.Element {
         const title = webview?.getTitle()
         dispatch(browserSlice.actions.changeTitle({title: title}))
       })
-      contextMenu({
-        window: webview,
-        showInspectElement: false,
-      })
+      if(webview) {
+        contextMenu({
+          window: webview,
+          showInspectElement: false,
+        })
+      }
     }, [])
     useEffect(() => {  // stop video at start download
       if(dlState.dlVideos.length > 0) {
