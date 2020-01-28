@@ -1,0 +1,12 @@
+{
+  "extends": "./node_modules/electron-webpack/tsconfig-base.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "newLine": "CRLF",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "files": ["src/types/vendor.d.ts"]
+}

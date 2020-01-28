@@ -1,0 +1,91 @@
+{
+  "name": "astabrowser",
+  "version": "0.1.0-beta.1",
+  "description": "Browser & Downloader",
+  "scripts": {
+    "clean": "rm -rf dist app",
+    "postinstall": "electron-webpack dll",
+    "dev": "electron-webpack dev",
+    "dll": "electron-webpack dll",
+    "compile": "electron-webpack",
+    "build:dir": "electron-webpack && electron-builder --dir -c.compression store -c.mac.identity null -c.asar false",
+    "build": "electron-webpack && electron-builder",
+    "build:win": "electron-webpack && electron-builder --win --x64"
+  },
+  "electronWebpack": {
+    "title": "AstaBrowser",
+    "renderer": {
+      "dll": [
+        "react",
+        "react-dom"
+      ],
+      "webpackConfig": "webpack.renderer.additions.js"
+    },
+    "main": {
+      "webpackConfig": "webpack.main.additions.js"
+    },
+    "whiteListedModules": [
+      "@material-ui/core",
+      "@material-ui/icons"
+    ]
+  },
+  "build": {
+    "productName": "AstaBrowser",
+    "directories": {
+      "output": "app"
+    },
+    "win": {
+      "icon": "static/icon.ico"
+    },
+    "mac": {
+      "icon": "static/icon.icns",
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "appId": "work.phexcel.astabrowser"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.8.1",
+    "@material-ui/icons": "^4.5.1",
+    "electron-context-menu": "^0.15.2",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-store": "^5.1.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.7.4",
+    "@reduxjs/toolkit": "^1.2.1",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/request": "^2.48.4",
+    "@types/url-join": "^4.0.0",
+    "electron": "^7.1.7",
+    "electron-builder": "^22.2.0",
+    "electron-webpack": "^2.7.4",
+    "electron-webpack-ts": "^3.2.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "rxjs": "^6.5.4",
+    "sass-loader": "^8.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4",
+    "url-join": "^4.0.1",
+    "webpack": "^4.41.4",
+    "webpack-obfuscator": "^0.23.2"
+  },
+  "author": {
+    "name": "PHEXCEL",
+    "email": "phexcel@yahoo.com"
+  },
+  "license": "MIT"
+}
