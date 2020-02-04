@@ -329,7 +329,6 @@ export default class NormalDownloader {
   }
     outTS = () => {
         // out ts
-        const concatedBuffer = Buffer.concat(this.tsList)
         let title = this.videoTitle.slice(0, 50) + ".ts"
         const regForFileName = new RegExp('[\\/:*?"<>|]+', 'g');  // 保存不可文字の削除
         title = title.replace(regForFileName, '-');
@@ -340,6 +339,8 @@ export default class NormalDownloader {
         console.log('outTS====================================');
         console.log(savePath);
         console.log('====================================');
-        fs.writeFileSync(savePath, concatedBuffer)
+        for (const ts of this.tsList) {
+          fs.appendFileSync(savePath, ts)
+        }
     }
 }
