@@ -1,6 +1,6 @@
 {
   "name": "astabrowser",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "Browser & Downloader",
   "scripts": {
     "clean": "rm -rf dist app",
